@@ -1,17 +1,9 @@
 Rails.application.routes.draw do
  resources :posts
-   root "posts#index"
+   root "libraries#index"
 
   resources :libraries
-  resources :comments
-
-get 'posts' => "posts#show"
-get '/posts',             to: 'posts#index'
-get '/posts/new',         to: 'posts#new'
-get '/posts/:id/edit',    to: 'posts#edit'
-post '/posts',            to: 'posts#create'
-patch '/posts/:id',       to: 'posts#update'
-delete '/posts/:id',      to: 'posts#destroy'   
+ 
 
 get '/libraries/new',         to: 'libraries#new'
 get '/libraries/:id/edit',    to: 'libraries#edit'

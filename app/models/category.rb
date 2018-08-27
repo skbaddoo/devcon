@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-	has_many :posts, :line_items, inverse_of: :order
+	belongs_to :library
 end
