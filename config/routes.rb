@@ -3,6 +3,7 @@ Rails.application.routes.draw do
    root "posts#index"
 
   resources :libraries
+  resources :comments
 
 get 'posts' => "posts#show"
 get '/posts',             to: 'posts#index'
